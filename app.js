@@ -15,7 +15,7 @@ App({
       }
     });
     TD.launch({
-      uploadUrl:'https://web.jingtown.wang:9091/g/w',
+      uploadUrl:'https://h5.udrig.com/wx/app/v1',
       appkey: '28724A822ACA4F09AB82D5A5359B439B',
       appName: 'demo',
       versionName: '1.0.0',
