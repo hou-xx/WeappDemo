@@ -1,0 +1,76 @@
+
+<!--index.wxml-->
+<text>图标(text的长按复制功能暂未实现)</text>
+<view style="flex-direction:row;">
+  <icon type="success" size="{{iconSize}}" />
+  <icon type="success_no_circle" size="{{iconSize}}" />
+  <icon type="info" size="{{iconSize}}" />
+  <icon type="warn" size="{{iconSize}}" />
+  <icon type="waiting" size="{{iconSize}}" />
+  <icon type="cancel" size="{{iconSize}}" />
+  <icon type="download" size="{{iconSize}}" />
+  <icon type="search" size="{{iconSize}}" />
+  <icon type="clear" size="{{iconSize}}" />
+</view>
+<view style="flex-direction:row;">
+  <button bindtap="handleEvent" data-operation='iconSizeUp' size='mini' hover-class='button-hover'>Size Up</button>
+  <button bindtap="handleEvent" data-operation='iconSizeDown' size='mini' plain>Size down</button>
+</view>
+<text>\n-------------进度条----------------\n</text>
+<view style="flex-direction:row;">
+  <button bindtap="handleEvent" data-operation='changeProgress' type='primary' size='mini' hover>开始</button>
+  <button bindtap="handleEvent" data-operation='stopProgress' type='primary' size='mini' hover>暂停</button>
+</view>
+<progress percent="{{progress}}" show-info stroke-width='5' />
+<text>\n-------------CheckBox--------------\n</text>
+<text>CheckBox篇:{{checkboxText}}</text>
+<checkbox-group bindchange="checkBoxChanged">
+  <label class='checkbox' wx:for="{{checkboxItems}}">
+    <checkbox value="{{item.value}}" checked="{{item.checked}}" />{{item.name}}
+  </label>
+</checkbox-group>
+<text>\n-------------input-----------------\n</text>
+<text>input {{inputText}}</text>
+<input type="idcard" placeholder='这是一个输入框' bindinput='inputChange' />
+<text>\n-------------picker----------------\n</text>
+<text>picker :{{pickerResult}}</text>
+<view style="flex-direction:row;">
+  <picker mode='selector' range='{{checkboxItems}}' range-key='name' bindchange='handleEvent' data-operation='pickerChange' data-mode='selector'>
+    <text>{{checkboxItems[pickerIndex].name}}</text>
+  </picker>
+  <picker mode='time' start='12:50' end="23:45" bindchange='handleEvent' value='{{time}}' data-operation='pickerChange' data-mode='time'>
+    <text>{{time}}</text>
+  </picker>
+  <picker mode='date' start='2016-11-11' end="2017-02-19" bindchange='handleEvent' value='{{date}}' data-operation='pickerChange' data-mode='date'>
+    <text>{{date}}</text>
+  </picker>
+</view>
+<text>\n-------------picker-view------------\n</text>
+<text>picker-view : {{pickerViewResult}}</text>
+<picker-view indicator-style="height: 50px;" style="width: 100%; height: 200px;" value="{{value}}" bindchange="handleEvent" data-operation='pickerViewChanged'>
+  <picker-view-column>
+    <view wx:for="{{years}}" style="line-height: 50px">{{item}}年</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{months}}" style="line-height: 50px">{{item}}月</view>
+  </picker-view-column>
+  <picker-view-column>
+    <view wx:for="{{days}}" style="line-height: 50px">{{item}}日</view>
+  </picker-view-column>
+</picker-view>
+<text>\n-------------radio单选框------------\n</text>
+<text>单选结果 : {{radioResult}}</text>
+<radio-group bindchange="handleEvent" data-operation='radioChanged'>
+  <label wx:for='{{checkboxItems}}' wx:key='name'>
+    <radio value="{{item.name}}" checked="{{item.checked}}">{{item.name}}</radio>
+  </label>
+</radio-group>
+<text>\n-------------slider------------\n</text>
+<text>slider : {{sliderResult}}</text>
+<slider min='0' max='50' step='5' value='15' bindchange="handleEvent" data-operation='sliderChanged' show-value />
+<text>\n-------------switch------------\n</text>
+<switch type="switch" checked/>
+<switch type="checkbox" checked/>
+<text>\n-------------navigator------------\n</text>
+<navigator url="../second/second?params=来自组件tab的问候" open-type='navigate'>新页面打开 （audio、image）</navigator>
+<contact-button type="default-light" size="20" session-from="weapp">呼叫客服</contact-button>

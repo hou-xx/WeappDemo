@@ -1,0 +1,12 @@
+<text>{{params}}</text>
+<text>\n-------------audio------------\n</text>
+<audio id='audio' src="audioSrc" loop binderror='handleEvent' bindtap="audioError"
+controls poster name='这是名字（此时此刻）' author='这是作者（許巍）'></audio>
+<view style="flex-direction:row;">
+  <button type="primary" size='mini' bindtap="handleEvent" data-operation='audioStart' plain>播放</button>
+  <button type="primary" size='mini' bindtap="handleEvent" data-operation='audioStop'>暂停</button>
+  <button type="primary" size='mini' bindtap="handleEvent" data-operation='to30second' plain>播放至30秒</button>
+  <button type="primary" size='mini' bindtap="handleEvent" data-operation='backHome'>重新播放</button>
+</view>
+<image src="{{imageSrc}}" mode='aspectFill'/>
+<video src="{{videoSrc}}" controls objectFit='contain'></video>

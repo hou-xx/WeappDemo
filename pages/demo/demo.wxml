@@ -1,0 +1,18 @@
+<!-- index.wxml -->
+<button bindtap="showDia"plain>模拟弹窗</button>
+<button bindtap="showAction"plain>操作菜单</button>
+<button bindtap="changeTitle"plain>改變導航欄文字</button>
+<button bindtap="backHome">回到首页</button>
+<text>\n---------------图库篇--------------\n\n</text>
+<button bindtap="handleEvent" data-section='image' data-order='1'plain>调用图库 选择图片</button>
+<text>\n------------本地缓存篇------------\n\n</text>
+<button bindtap="handleEvent" data-section='cache' data-order='1' plain size="mini">查看本地缓存</button>
+<button bindtap="handleEvent" data-section='cache' data-order='2' size="mini"plain>创建本地缓存</button>
+<button bindtap="handleEvent" data-section='cache' data-order='3' size="mini"plain>清除本地缓存</button>
+<text>\n--------------地图---------------\n\n</text>
+<view style="flex-direction:row;">
+    <button bindtap="handleEvent" data-section='locate' data-order='1' plain size="mini" type='primary'>定位</button>
+    <button bindtap="handleEvent" data-section='locate' data-order='2' plain size="mini" type='primary'>打开地图选位置</button>
+    <button bindtap="handleEvent" data-section='locate' data-order='3' plain size="mini" type='primary'>根据经纬度打开地图</button>
+</view>
+<button bindtap="handleEvent" data-section='talkingdata'>event</button>

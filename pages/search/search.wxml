@@ -1,0 +1,14 @@
+<import src="template.wxml"  />
+<view class="search-area">
+  <input type="text" class="input" placeholder='{{inputHint}}' bindinput='handleEvent' data-operation='inputChange'  />
+  <button type='primary' class="search-btn" size='mini' bindtap="handleEvent" data-operation='search'plain>
+  {{searchBtnText}}
+  </button>
+</view>
+<block wx:for="{{searchData}}">
+  <template is="fundItem1" data="{{...item}}"  />
+</block>
+<block wx:for="{{riskData}}">
+  <template is="fundRisk" data="{{...item}}"  />
+</block>
+<navigator url="../index/index" open-type='switchTab'>进入搜索页</navigator>

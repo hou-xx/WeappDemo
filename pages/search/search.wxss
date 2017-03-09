@@ -1,0 +1,23 @@
+.fund-area {
+  background-color: #ff9900;
+  display: flex;
+  margin:20rpx;
+  padding: 5rpx;
+  border-radius: 10rpx;
+}
+.search-area{
+  margin-top:20rpx;
+  padding: 5rpx;
+  display:flex;
+  flex-direction:row;
+}
+.input{
+  margin: 1rpx 1rpx 1rpx 10rpx;
+  height: 60rpx;
+  width: 80%;
+}
+.search-btn{
+  margin: 1rpx 10rpx 1rpx 1rpx;  
+  height: 60rpx;
+  width: 20%
+}

@@ -1,0 +1,10 @@
+<template name="fundItem1">
+    <view bindtap="handleEvent" data-code='{{code}}' data-operation='fundDetail' class="fund-area">
+        <text bindtap="handleEvent" data-code='{{code}}' data-operation='fundDetail'>name:{{finfoBenchmark}}\n riskReturn:{{riskReturn}}</text>
+    </view>
+</template>
+<template name="foundRisk">
+    <view bindtap="handleEvent" data-code='{{code}}' data-operation='fundDetail' class="fund-area">
+        <text bindtap="handleEvent" data-code='{{code}}' data-operation='fundDetail'>风险等级:{{riskLevel}}</text>
+    </view>
+</template>
