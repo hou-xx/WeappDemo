@@ -47,6 +47,13 @@ Page({
     getData(this, 2e3);
   },
   onPullDownRefresh: function () {
+    var that = this;
+    setTimeout(function () {
+      index = 1;
+      that.data.listContent.splice(0, that.data.listContent.length);
+      getData(that, 1e1);
+    }, 2e3);
+    wx.stopPullDownRefresh();
   }
 });
 /**
@@ -64,6 +71,7 @@ function getData(that, time) {
     }
     that.setData({
       isReachBottom: false,
+      noMoreData: false,
       listContent: that.data.listContent.concat(temp)
     });
   }, time);
