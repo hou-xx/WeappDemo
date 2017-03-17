@@ -5,7 +5,8 @@
     "pages/image/image",
     "pages/demo/demo",
     "pages/search/search",
-    "pages/second/second"
+    "pages/second/second",
+    "pages/secondary/listPage/listPage"
   ],
   "window": {
     "backgroundTextStyle": "dark",

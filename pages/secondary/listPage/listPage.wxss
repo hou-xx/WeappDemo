@@ -1,4 +1,3 @@
-/**app.wxss**/
 .container {
   height: 100%;
   display: flex;
@@ -7,9 +6,14 @@
   justify-content: space-between;
   padding: 200rpx 0;
   box-sizing: border-box;
-} 
-.outer-area{
+}
+
+.textStyle {
   display: flex;
   flex-direction: column;
-  padding: 32rpx 40rpx;
+  align-items: center;
+}
+
+.textContainer {
+  margin-top: 200px;
 }
