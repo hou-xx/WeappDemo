@@ -1,5 +1,10 @@
-<view class="container">
-  <view class="textContainer">
-    <text class="textStyle">{{text}}</text>
-  </view>
+
+<view class="outer-area">
+  <view class="list-header">list header</view>
+  <block wx:for="{{listContent}}" wx:for-item="content">
+    <view class="item-outer">
+      <view class="item-left">{{content.index}}</view>
+      <view class="item-right">{{content.text}}</view>
+    </view>
+  </block>
 </view>

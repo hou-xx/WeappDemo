@@ -1,8 +1,9 @@
 var appInstance = getApp();
-var TD = require('../../utils/tdweapp.js');
+var TD = require('../../../utils/tdweapp.js');
+var index = 1;
 Page({
   data: {
-    text: "Page listPage"
+    listContent: []
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -14,6 +15,11 @@ Page({
         count: 1
       }
     });
+    var temp = [];
+    for (var i = 0; i < 20; i++) {
+      temp.push({ index: index++, text: i % 2 ? '天王盖地虎' : '小鸡炖蘑菇' });
+    }
+    this.setData({ listContent: this.data.listContent.concat(temp) });
   },
   onReady: function () {
     // 页面渲染完成
