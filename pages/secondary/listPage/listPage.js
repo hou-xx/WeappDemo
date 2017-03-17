@@ -20,6 +20,9 @@ Page({
     });
     getData(this, 1e1);
   },
+  /**
+   * 利用setInterval 添加动画
+   */
   onShow: function () {
     var i = 0
     var animation = wx.createAnimation({
@@ -36,6 +39,9 @@ Page({
   onUnload: function () {
     index = 1;
   },
+  /**
+   * 到达底部 显示加载动画
+   */
   onReachBottom: function () {
     this.setData({ isReachBottom: true });
     getData(this, 2e3);
@@ -43,9 +49,12 @@ Page({
   onPullDownRefresh: function () {
   }
 });
+/**
+ * 根据延时添加数据 模拟网络请求
+ */
 function getData(that, time) {
   setTimeout(function () {
-    if (index > 60) {
+    if (index > 80) {
       that.setData({ noMoreData: true });
       return;
     }
