@@ -3,6 +3,8 @@ var TD = require('../../../utils/tdweapp.js');
 var index = 1;
 Page({
   data: {
+    isReachBottom: false,
+    noMoreData: false,
     listContent: []
   },
   onLoad: function (options) {
@@ -15,22 +17,28 @@ Page({
         count: 1
       }
     });
+    getData(this);
+  },
+  onReachBottom: function () {
+    this.setData({ isReachBottom: true });
+    getData(this);
+  },
+  onPullDownRefresh: function () {
+  }
+});
+function getData(that) {
+  setTimeout(function () {
+    if (index > 60) {
+      that.setData({ noMoreData: true });
+      return;
+    }
     var temp = [];
     for (var i = 0; i < 20; i++) {
       temp.push({ index: index++, text: i % 2 ? '天王盖地虎' : '小鸡炖蘑菇' });
     }
-    this.setData({ listContent: this.data.listContent.concat(temp) });
-  },
-  onReady: function () {
-    // 页面渲染完成
-  },
-  onShow: function () {
-    // 页面显示
-  },
-  onHide: function () {
-    // 页面隐藏
-  },
-  onUnload: function () {
-    // 页面关闭
-  }
-})
+    that.setData({
+      isReachBottom: false,
+      listContent: that.data.listContent.concat(temp)
+    });
+  }, 2e3);
+}
