@@ -60,7 +60,7 @@ function getData(that, time) {
     }
     var temp = [];
     for (var i = 0; i < 20; i++) {
-      temp.push({ index: index++, text: i % 2 ? '天王盖地虎' : '小鸡炖蘑菇' });
+      temp.push({ index: index++, text: !(i % 2) ? '十年生死两茫茫，不思量，自难忘。' : '千里孤坟何处话凄凉。' });
     }
     that.setData({
       isReachBottom: false,

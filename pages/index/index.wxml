@@ -1,7 +1,7 @@
 <view class="outer-area">
   <view class="btn-outer">
-    <view class="btn-raw-screen" bindtap='handleEvent' data-operation='pullUp'>上拉加载</view>
-    <view class="btn-raw-screen">22222222</view>
-    <view class="btn-raw-screen">33333333</view>
+    <view class="btn-raw-screen" bindtap='handleEvent' data-operation='pullUp'>上拉下拉</view>
+    <view class="btn-raw-screen"></view>
+    <view class="btn-raw-screen"></view>
   </view>
 </view>
