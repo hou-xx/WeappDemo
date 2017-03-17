@@ -5,7 +5,8 @@ Page({
   data: {
     isReachBottom: false,
     noMoreData: false,
-    listContent: []
+    listContent: [],
+    loadingAnimation: {}
   },
   onLoad: function (options) {
     // 页面初始化 options为页面跳转所带来的参数
@@ -17,16 +18,32 @@ Page({
         count: 1
       }
     });
-    getData(this);
+    getData(this, 1e1);
+  },
+  onShow: function () {
+    var i = 0
+    var animation = wx.createAnimation({
+      duration: 1000
+    })
+    var that = this;
+    setInterval(function () {
+      animation.rotate(360 * (++i)).step()
+      that.setData({
+        loadingAnimation: animation.export()
+      })
+    }.bind(that), 1000);
+  },
+  onUnload: function () {
+    index = 1;
   },
   onReachBottom: function () {
     this.setData({ isReachBottom: true });
-    getData(this);
+    getData(this, 2e3);
   },
   onPullDownRefresh: function () {
   }
 });
-function getData(that) {
+function getData(that, time) {
   setTimeout(function () {
     if (index > 60) {
       that.setData({ noMoreData: true });
@@ -40,5 +57,5 @@ function getData(that) {
       isReachBottom: false,
       listContent: that.data.listContent.concat(temp)
     });
-  }, 2e3);
+  }, time);
 }
