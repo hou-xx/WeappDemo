@@ -1,4 +1,4 @@
-var baseUrl = 'http://ra1.test.cibfintech.com/dfp-robot-advisor-rest/';
+var appInstance = getApp();
 function request(params) {
     if (!_validateAttr(params.url)) {
         params.fail();
@@ -6,7 +6,7 @@ function request(params) {
     }
     var requestUrl = params.url;
     if (requestUrl.substr(0, 4) != 'http') {
-        requestUrl = baseUrl + params.url;
+        requestUrl = appInstance.globalData.baseUrl + params.url;
     }
     if (!_validateAttr(params.method)) {
         params.method = 'GET';
@@ -14,7 +14,7 @@ function request(params) {
     if (!_validateAttr(params.dataType)) {
         params.dataType = 'json';
     }
-    console.log('requestUrl---' + requestUrl);
+    console.log('requestUrl--->' + requestUrl);
     wx.request({
         url: requestUrl,
         data: params.data,
@@ -43,5 +43,5 @@ function _validateAttr(attr) {
 }
 
 module.exports = {
-  request: request
+    request: request
 }

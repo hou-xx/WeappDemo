@@ -7,15 +7,8 @@ App({
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs);
     //弹窗
-    wx.showToast({
-      title: '初始化成功',
-      icon: 'success',
-      duration: 1000,
-      success: function () {
-      }
-    });
     TD.launch({
-      uploadUrl:'https://h5.udrig.com/wx/app/v1',
+      uploadUrl: 'https://h5.udrig.com/wx/app/v1',
       appkey: '28724A822ACA4F09AB82D5A5359B439B',
       appName: 'demo',
       versionName: '1.0.0',
@@ -54,20 +47,7 @@ App({
   },
   //全局数据
   globalData: {
-     userData: {
-      userCode: null,
-      userInfo: null,
-      accessToken: null,
-      passportExpireSeconds: null,
-      refreshToken: null,
-      userId: 123456
-    },
-    dataCollection: {
-      source: null
-    }
-  },
-  userData: {
-    userInfo: null,
-    userCode: null
+    baseUrl: '',
+    userInfo: {}
   }
 })
