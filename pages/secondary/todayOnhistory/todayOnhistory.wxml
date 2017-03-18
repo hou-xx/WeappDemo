@@ -1,0 +1,11 @@
+<view class="outer-area">
+  <view class="list-header">他年今日</view>
+  <scroll-view scroll-y class="scroll-content">
+    <block wx:for="{{eventList}}" wx:for-item="event">
+      <view class="item-outer">
+        <view class="item-left">{{event.date}}</view>
+        <view class="item-right">{{event.title}}</view>
+      </view>
+    </block>
+  </scroll-view>
+</view>

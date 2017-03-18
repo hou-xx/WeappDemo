@@ -7,6 +7,9 @@
     border-radius: 10rpx;
     color: #37BC9B;
 }
+.scroll-content{
+  height: 100%;
+}
 .item-outer{
    display: flex;
   flex-direction: raw;
@@ -22,32 +25,11 @@
     text-align: center;
     font-size: 28rpx;
     color: #353535;
+    margin-right: 16rpx;
 
 }
 .item-right{
-    flex: 3;
+    flex: 2;
     font-size: 28rpx;
     color: #353535;
-}
-.loading-view {
-  display: flex;
-  flex-flow: raw wrap;
-  justify-content: center;
-  margin-bottom: 22rpx;
-  height: 30rpx;
-  border-top: 1rpx solid #48CFAD;
-  padding: 16rpx 0;
-}
-
-.loading-icon {
-  height: 30rpx;
-  width: 30rpx;
-  margin-right: 10rpx;
-}
-
-.loading-text {
-  height: 30rpx;
-  line-height: 30rpx;
-  color: #b2b2b2;
-  font-size: 24rpx;
 }

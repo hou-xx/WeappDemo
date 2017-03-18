@@ -6,7 +6,8 @@
     "pages/demo/demo",
     "pages/search/search",
     "pages/second/second",
-    "pages/secondary/listPage/listPage"
+    "pages/secondary/listPage/listPage",
+    "pages/secondary/todayOnhistory/todayOnhistory"
   ],
   "window": {
     "backgroundTextStyle": "dark",

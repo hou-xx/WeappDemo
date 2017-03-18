@@ -47,7 +47,7 @@ App({
   },
   //全局数据
   globalData: {
-    baseUrl: '',
+    baseUrl: 'http://v.juhe.cn/',
     userInfo: {}
   }
 })

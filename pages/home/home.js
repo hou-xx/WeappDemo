@@ -18,8 +18,13 @@ Page({
       case 'pullUp':
         wx.navigateTo({
           url: '/pages/secondary/listPage/listPage?from=home'
-        })
+        });
         break;
+      case 'todayOnhistory':
+        wx.navigateTo({
+          url: '/pages/secondary/todayOnhistory/todayOnhistory'
+        });
+      break;
     }
   }
 })
