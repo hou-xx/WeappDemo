@@ -1,6 +1,6 @@
 {
   "pages": [
-    "pages/index/index",
+    "pages/home/home",
     "pages/logs/logs",
     "pages/image/image",
     "pages/demo/demo",
@@ -10,16 +10,16 @@
   ],
   "window": {
     "backgroundTextStyle": "dark",
-    "navigationBarBackgroundColor": "#BBDEF8",
+    "navigationBarBackgroundColor": "#37BC9B",
     "navigationBarTitleText": "Demo",
     "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "list": [
       {
-        "pagePath": "pages/index/index",
-        "iconPath": "image/11.png",
-        "selectedIconPath": "image/12.png",
+        "pagePath": "pages/home/home",
+        "iconPath": "image/home.png",
+        "selectedIconPath": "image/home-selected.png",
         "text": "HOME"
       },
       {
@@ -41,9 +41,9 @@
         "text": "功能"
       }
     ],
-    "backgroundColor": "#656d78",
-    "color": "#000000",
-    "selectedColor": "#ffd5b671",
+    "backgroundColor": "#F5F7FA",
+    "color": "#CCD1D9",
+    "selectedColor": "#37BC9B",
     "borderStyle": "white",
     "position": "bottom"
   },
