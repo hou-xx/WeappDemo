@@ -3,8 +3,8 @@
   <scroll-view scroll-y class="scroll-content">
     <block wx:for="{{eventList}}" wx:for-item="event">
       <view class="item-outer">
-        <view class="item-left">{{event.date}}</view>
-        <view class="item-right">{{event.title}}</view>
+        <view class="item-left" bindtap='handleEvent' data-operation='historyDetail' data-eid="{{event.e_id}}">{{event.date}}</view>
+        <view class="item-right" bindtap='handleEvent' data-operation='historyDetail' data-eid="{{event.e_id}}">{{event.title}}</view>
       </view>
     </block>
   </scroll-view>

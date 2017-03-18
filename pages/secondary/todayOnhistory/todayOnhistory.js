@@ -11,11 +11,12 @@ Page({
     getData(this);
   },
   handleEvent: function (event) {
-    var operation = event.target.dataset.operation;
+    var operation = event.target.dataset.operation; event.target.dataset.eid
     switch (operation) {
-      case 'pullUp':
-        break;
-      case 'todayOnhistory':
+      case 'historyDetail':
+        wx.navigateTo({
+          url: '/pages/secondary/historyDetail/historyDetail?eId=' + event.target.dataset.eid
+        });
         break;
     }
   }
