@@ -7,20 +7,23 @@
   border-radius: 10rpx;
   color: #37bc9b;
 }
-.history-content{
+
+.history-content {
   font-size: 32rpx;
   color: 434A54;
 }
-.history-pic-img{
+
+.history-pic-img {
   margin: 16rpx 0;
   width: 400rpx;
   height: 600rpx;
   align-self: center;
 }
-.history-pic-title{
+
+.history-pic-title {
   font-size: 28rpx;
-  background: #F5F7FA;
-  color: #656D78;
+  background: #f5f7fa;
+  color: #656d78;
   align-self: center;
   padding: 16rpx;
   text-align: center;

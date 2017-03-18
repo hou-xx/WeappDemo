@@ -33,7 +33,7 @@ function getData(that) {
     method: 'get',
     data: {
       key: appInstance.globalData.todayOfHistoryKey,
-      date: (date.getMonth() + 1) + '/' + date.getDay()
+      date: (date.getMonth() + 1) + '/' + date.getDate()
     },
     success: function (res) {
       if (!res || !res.data || res.data.error_code) { return; }
