@@ -1,18 +1,21 @@
 /**index.wxss**/
-.btn-outer{
-   display: flex;
+
+.btn-outer {
+  display: flex;
   flex-direction: raw;
   justify-content: space-around;
 }
-.btn-raw-screen{
-    flex: 1;
-    text-align: center;
-    margin-right: 16rpx;
-    padding: 16rpx;
-    border: 1rpx solid #37BC9B;
-    border-radius: 10rpx;
-    color: #37BC9B;
+
+.btn-raw-screen {
+  flex: 1;
+  text-align: center;
+  margin-right: 16rpx;
+  padding: 16rpx;
+  border: 1rpx solid #37bc9b;
+  border-radius: 10rpx;
+  color: #37bc9b;
 }
-.btn-raw-screen:last-child{
+
+.btn-raw-screen:last-child {
   margin-right: none;
 }

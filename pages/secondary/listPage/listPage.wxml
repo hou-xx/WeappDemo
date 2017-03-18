@@ -1,4 +1,3 @@
-
 <view class="outer-area">
   <view class="list-header">list header</view>
   <block wx:for="{{listContent}}" wx:for-item="content">
@@ -8,7 +7,7 @@
     </view>
   </block>
   <view class="loading-view" wx:if="{{isReachBottom&&(!noMoreData)}}">
-    <image class="loading-icon" animation="{{loadingAnimation}}" src="../../../image/loading.png" mode="aspectFit"  />
+    <image class="loading-icon" animation="{{loadingAnimation}}" src="../../../image/loading.png" mode="aspectFit" />
     <view class="loading-text">正在加载中……</view>
   </view>
   <view class="loading-view" wx:if="{{isReachBottom&&noMoreData}}">
