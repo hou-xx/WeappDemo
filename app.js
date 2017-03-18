@@ -48,6 +48,7 @@ App({
   //全局数据
   globalData: {
     baseUrl: 'http://v.juhe.cn/',
+    todayOfHistoryKey:'890fa80e82abae392df23cab4da607a7',
     userInfo: {}
   }
 })

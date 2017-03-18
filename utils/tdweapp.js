@@ -103,7 +103,7 @@ var Util = {
             Util.Store.set("TDSDK_session_time", n), Object.assign(i, this.session()), this.sessionSend(i, e, t)
     }, sessionSend: function (e, t, i) {
         /**********测试添加开始******* */
-        console.error(e);
+        console.log(e);
         /**********测试添加结束******* */
         Util.request({
             data: {

@@ -1,6 +1,5 @@
 var appInstance = getApp();
 var httpUtil = require('../../../utils/httpUtil.js');
-var appKey = '890fa80e82abae392df23cab4da607a7';
 Page({
   data: {
     eventList: []
@@ -27,11 +26,10 @@ function getData(that) {
     url: 'todayOnhistory/queryEvent.php',
     method: 'get',
     data: {
-      key: appKey,
+      key: appInstance.globalData.todayOfHistoryKey,
       date: (date.getMonth() + 1) + '/' + date.getDay()
     },
     success: function (res) {
-      console.log(res);
       if (!res || !res.data || res.data.error_code) { return; }
       that.setData({ eventList: res.data.result });
     },

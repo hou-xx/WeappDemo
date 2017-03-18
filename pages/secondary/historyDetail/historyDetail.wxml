@@ -1,5 +1,8 @@
-<view class="container">
-  <view class="textContainer">
-    <text class="textStyle">{{text}}</text>
-  </view>
+<view class="outer-area">
+  <view class="list-header">{{title}}</view>
+  <text class="history-content">{{content}}</text>
+  <block wx:for="{{picUrl}}" wx:for-item="pic">
+    <image class="history-pic-img" src="{{pic.url}}" mode="aspectFit"></image>
+    <view class="history-pic-title">{{pic.pic_title}}</view>
+  </block>
 </view>
