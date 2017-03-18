@@ -9,6 +9,12 @@ Page({
     // 获取历史上的今天数据
     getData(this);
   },
+  onShareAppMessage: function () {
+    return {
+      title: '历史上的今天',
+      path: '/pages/secondary/todayOnhistory/todayOnhistory'
+    };
+  },
   handleEvent: function (event) {
     var operation = event.target.dataset.operation; event.target.dataset.eid
     switch (operation) {
