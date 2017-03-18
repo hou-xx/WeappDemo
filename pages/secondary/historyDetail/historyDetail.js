@@ -23,7 +23,10 @@ function getDetailData(that) {
       e_id: eId
     },
     success: function (res) {
-      if (!res || !res.data || res.data.error_code) { return; }
+      if (!res || !res.data || res.data.error_code || !res.data.result) {
+        that.setData({ title: 'Sorry, no detail data!' });
+        return;
+      }
       var result = res.data.result[0];
       var temp = [];
       result.picUrl.forEach(function (value, index, array) {
