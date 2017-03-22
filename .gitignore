@@ -1,0 +1,3 @@
+#忽略编译器自动生成文件
+jsconfig.json
+typings/
