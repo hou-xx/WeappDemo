@@ -9,6 +9,12 @@
 
 ## 常用色值
 ![色值图片][1]
+     
+##  历史上的今天 界面展示    
+![home][2] ![todayList][3] ![todayDetail][4]
 
 
-[1]:https://raw.githubusercontent.com/tianqing2117/WeappDemo/master/screenshots/color.jpg
+[1]:https://raw.githubusercontent.com/tianqing2117/WeappDemo/master/screenshots/color.jpg    
+[2]:https://raw.githubusercontent.com/tianqing2117/WeappDemo/master/screenshots/home.png    
+[3]:https://raw.githubusercontent.com/tianqing2117/WeappDemo/master/screenshots/todayList.png     
+[4]:https://raw.githubusercontent.com/tianqing2117/WeappDemo/master/screenshots/todayDetail.png
