@@ -1,5 +1,6 @@
 var appInstance = getApp();
 var httpUtil = require('../../../utils/httpUtil.js');
+var promiseUtil = require('../../../utils/promiseUtil');
 Page({
   data: {
     eventList: []
@@ -28,19 +29,33 @@ Page({
 });
 function getData(that) {
   var date = new Date();
-  httpUtil.request({
+  //使用Promise 处理回调
+  var httpPromise = promiseUtil.wxPromisify(httpUtil.request);
+  httpPromise({
     url: 'todayOnhistory/queryEvent.php',
     method: 'get',
     data: {
       key: appInstance.globalData.todayOfHistoryKey,
       date: (date.getMonth() + 1) + '/' + date.getDate()
-    },
-    success: function (res) {
-      if (!res || !res.data || res.data.error_code) { return; }
-      that.setData({ eventList: res.data.result });
-    },
-    fail: function (error) {
-      console.log(error);
     }
-  });
+  }).then(function (res) {
+    if (!res || !res.data || res.data.error_code) { return; }
+    that.setData({ eventList: res.data.result });
+  }).catch(function (error) { console.log(error); });
+
+  // httpUtil.request({
+  //   url: 'todayOnhistory/queryEvent.php',
+  //   method: 'get',
+  //   data: {
+  //     key: appInstance.globalData.todayOfHistoryKey,
+  //     date: (date.getMonth() + 1) + '/' + date.getDate()
+  //   },
+  //   success: function (res) {
+  //     if (!res || !res.data || res.data.error_code) { return; }
+  //     that.setData({ eventList: res.data.result });
+  //   },
+  //   fail: function (error) {
+  //     console.log(error);
+  //   }
+  // });
 }
