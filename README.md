@@ -15,6 +15,10 @@ appKey:wxba8299c52a991281
 ##  历史上的今天 界面展示    
 ![home][2] ![todayList][3] ![todayDetail][4]
 
+## Tips    
+- {{}} 会先于页面渲染 执行，image标签 src中链接可以部分是计算出来然后拼接的      
+- target指代 触发事件的源组件；currentTarget指代 事件绑定的当前组件。 在外层view绑定的事件 想要响应内层view的事件 必须使用currentTarget才能正常得到传递的数据
+
 
 [1]:https://raw.githubusercontent.com/tianqing2117/WeappDemo/master/screenshots/color.jpg    
 [2]:https://raw.githubusercontent.com/tianqing2117/WeappDemo/master/screenshots/home.png    
