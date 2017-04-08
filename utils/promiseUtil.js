@@ -1,4 +1,4 @@
-var Promise = require('bluebird.min') ;
+// var Promise = require('bluebird.min') ;
 function wxPromisify(fn) {  
   return function (obj = {}) {    
     return new Promise((resolve, reject) => {      

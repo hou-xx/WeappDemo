@@ -42,20 +42,4 @@ function getData(that) {
     if (!res || !res.data || res.data.error_code) { return; }
     that.setData({ eventList: res.data.result });
   }).catch(function (error) { console.log(error); });
-
-  // httpUtil.request({
-  //   url: 'todayOnhistory/queryEvent.php',
-  //   method: 'get',
-  //   data: {
-  //     key: appInstance.globalData.todayOfHistoryKey,
-  //     date: (date.getMonth() + 1) + '/' + date.getDate()
-  //   },
-  //   success: function (res) {
-  //     if (!res || !res.data || res.data.error_code) { return; }
-  //     that.setData({ eventList: res.data.result });
-  //   },
-  //   fail: function (error) {
-  //     console.log(error);
-  //   }
-  // });
 }
