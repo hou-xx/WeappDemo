@@ -6,7 +6,7 @@ App({
     var logs = wx.getStorageSync('logs') || []
     logs.unshift(Date.now())
     wx.setStorageSync('logs', logs);
-    //弹窗
+    // 初始化TalkingData 
     TD.launch({
       uploadUrl: 'https://h5.udrig.com/wx/app/v1',
       appkey: '28724A822ACA4F09AB82D5A5359B439B',
@@ -40,7 +40,7 @@ App({
               that.globalData.userInfo = res.userInfo
               typeof cb == "function" && cb(that.globalData.userInfo)
             }
-          });
+          });          
         }
       })
     }

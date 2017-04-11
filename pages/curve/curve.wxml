@@ -1,0 +1,3 @@
+<view>
+<canvas canvas-id="myChart" class="canvas-area"></canvas>
+	</view>
